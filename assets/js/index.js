@@ -10,8 +10,30 @@ GOALS
     - Program board to reset tile positions  after predetermined number of attempts
 =========================================================- */
 
-// declare variables
-var memory-game-array = ['1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6']; // array representing game tiles
-var game-values = [];  // to store game values
-var tile-ids = [];  // to store the id of each game tile
-var flipped-tiles = 0;  // to keep track of number of tiles that are flipped
+// =========== clock triggered on page load  ======================= //
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var totalSeconds = 0;
+setInterval(setTime, 1000);
+
+function setTime()
+{
+    ++totalSeconds;
+    secondsLabel.innerHTML = pad(totalSeconds%60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+}
+
+function pad(val)
+{
+    var valString = val + "";
+    if(valString.length < 2)
+    {
+        return "0" + valString;
+    }
+    else
+    {
+        return valString;
+    }
+}
+
+// ====================================================== //
