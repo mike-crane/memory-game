@@ -1,198 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="assets/css/meyers_reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/stylesheet.css">
-    <title>Memory Game</title>
-  </head>
-  <body>
-    <div class="main">
-      <header>
-                     <!-- GAME TITLE -->
-        <h1 class="title">Mem<i class="fa fa-lightbulb-o"></i>ry</h1>
-      </header>
-                        <!--  Hearts & Clock  -->
-          <div class="board">
-            <ul>
-              <div class="bar">
-                <section class="heart">
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                  <span><i class="fa fa-heart"></i></span>
-                </section>
-                  <div id="timer">
-                      <label id="minutes">00</label>:<label id="seconds">00</label>
-                  </div>
-              </div>
-            </ul>
-            <br></br>
-                             <!-- TILES -->
-            <ul>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="a1">
-                <label class="card" for="a1">
-                  <div class="flip"><i class="fa fa-anchor fa-2x"></i>
-                  </div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="a2">
-                <label class="card" for="a2">
-                  <div class="flip"><i class="fa fa-bolt fa-2x"></i></i>
-                  </div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="a3">
-                <label class="card" for="a3">
-                  <div class="flip"><i class="fa fa-futbol-o fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="a4">
-                <label class="card" for="a4">
-                  <div class="flip"><i class="fa fa-taxi fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="a5">
-                <label class="card" for="a5">
-                  <div class="flip"><i class="fa fa-cogs fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="a6">
-                <label class="card" for="a6">
-                  <div class="flip"><i class="fa fa-bicycle fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-            </ul>
-            <ul>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="b1">
-                <label class="card" for="b1">
-                  <div class="flip"><i class="fa fa-cogs fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="b2">
-                <label class="card" for="b2">
-                  <div class="flip"><i class="fa fa-taxi fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="b3">
-                <label class="card" for="b3">
-                  <div class="flip"><i class="fa fa-hand-peace-o fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="b4">
-                <label class="card" for="b4">
-                  <div class="flip"><i class="fa fa-anchor fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="b5">
-                <label class="card" for="b5">
-                  <div class="flip"><i class="fa fa-bolt fa-2x"></i></i>
-                  </div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="b6">
-                <label class="card" for="b6">
-                  <div class="flip"><i class="fa fa-futbol-o fa-2x"></i>
-                  </div>
-                </label>
-              </div>
-            </li>
-            </ul>
-            <ul>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="c1">
-                <label class="card" for="c1">
-                  <div class="flip"><i class="fa fa-recycle fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="c2">
-                <label class="card" for="c2">
-                  <div class="flip"><i class="fa fa-medkit fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="c3">
-                <label class="card" for="c3">
-                  <div class="flip"><i class="fa fa-recycle fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="c4">
-                <label class="card" for="c4">
-                  <div class="flip"><i class="fa fa-hand-peace-o fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="c5">
-                <label class="card" for="c5">
-                  <div class="flip"><i class="fa fa-bicycle fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-              <li>
-                <div class="pane">
-                <input type="checkbox" id="c6">
-                <label class="card" for="c6">
-                  <div class="flip"><i class="fa fa-medkit fa-2x"></i></i></div>
-                </label>
-              </div>
-            </li>
-            </ul>
-        </div>
-          </div>
-          <script src="assets/js/index.js"></script>
-  </body>
-</html>
+    <html>
+        <head>
+            <!-- <link rel="stylesheet" href="assets/css/meyers_reset.css"> -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="assets/css/stylesheet.css">
+            <script src="assets/js/script.js"></script>
+            <script src="assets/js/script2.js"></script>
+            <title>Memory Game</title>
+        </head>
+        <body>
+            <div class="main">
+                <header>
+                    <h1 class="title">Mem<i class="fa fa-lightbulb-o"></i>ry</h1>
+                </header>
+                <div id="timer">
+                <label id="minutes">00</label>:<label id="seconds">00</label>
+                </div>
+            <div id="mainBoard">
+            </div>
+            <script>boardRefresh();</script>
+        </body>
+    </html>
